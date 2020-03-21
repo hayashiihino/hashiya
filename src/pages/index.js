@@ -1,3 +1,12 @@
 import React from "react"
+import Layout from "../components/Layout"
+import Head from "../components/Head"
 
-export default () => <div>Hello world!</div>
+const indexPage = () => (
+  <Layout>
+    <Head title="Home"></Head>
+    Hello world!
+  </Layout>
+)
+
+export default indexPage
