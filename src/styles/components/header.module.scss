@@ -1,0 +1,25 @@
+.header {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  padding: 1rem 0 3 rem;
+  background: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  a {
+    color: white;
+    margin-right: 1.3rem;
+    &:hover {
+      color: black;
+      background: white;
+    }
+  }
+  .active-nav-item {
+    color: black;
+    background: white;
+  }
+}
