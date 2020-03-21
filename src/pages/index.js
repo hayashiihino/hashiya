@@ -4,7 +4,7 @@ import Head from "../components/Head"
 
 const indexPage = () => (
   <Layout>
-    <Head title="Home"></Head>
+    <Head title="Home" />
     Hello world!
   </Layout>
 )

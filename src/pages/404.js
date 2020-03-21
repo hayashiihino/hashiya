@@ -1,11 +1,11 @@
 import React from "react"
-import Head from "../components/head"
 import Layout from "../components/Layout"
+import Head from "../components/Head"
 
 const NotFoundPage = () => (
   <Layout>
     <Head title="404" />
-    <div>404</div>
+    <div>404!!</div>
   </Layout>
 )
 
