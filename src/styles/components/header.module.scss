@@ -1,5 +1,6 @@
 .header {
   margin: 0;
+  padding: 1rem;
   display: flex;
   justify-content: space-between;
   margin-bottom: 3rem;
@@ -11,6 +12,7 @@
   list-style-type: none;
   margin: 0;
   a {
+    display: inline-block;
     color: white;
     margin-right: 1.3rem;
     &:hover {
