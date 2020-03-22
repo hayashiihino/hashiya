@@ -1,19 +1,25 @@
 import React from "react"
-import headerStyles from "../styles/components/header.module.scss"
 import { Link } from "gatsby"
+import { Navbar, Nav } from "react-bootstrap"
+// import headerStyles from "../styles/components/header.module.scss"
 
 const Header = () => (
-  <div className={headerStyles.header}>
-    <Link to="/" activeClassName={headerStyles.activeNavItem}>
-      ホーム
+  <Navbar bg="dark" variant="dark">
+    <Link to="/">
+      <Navbar.Brand>ホーム</Navbar.Brand>
     </Link>
-    <Link to="/blog" activeClassName={headerStyles.activeNavItem}>
-      ブログ
-    </Link>
-    <Link to="/contact" activeClassName={headerStyles.activeNavItem}>
-      お問い合わせ
-    </Link>
-  </div>
+    <Navbar.Toggle aria-controls="navbarResponsive" />
+    <Navbar.Collapse id="navbarResponsive" variant="light">
+      <Nav as="ul" className="ml-auto">
+        <Link to="/blog" className="nav-link" activeClassName="active">
+          <Nav.Item>ブログ</Nav.Item>
+        </Link>
+        <Link to="/contact" activeClassName="active" className="nav-link">
+          <Nav.Item>お問い合わせ</Nav.Item>
+        </Link>
+      </Nav>
+    </Navbar.Collapse>
+  </Navbar>
 )
 
 export default Header

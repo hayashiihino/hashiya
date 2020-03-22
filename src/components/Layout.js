@@ -1,14 +1,13 @@
 import React from "react"
 import Header from "./Header"
 import Footer from "./Footer"
-import "normalize.css/normalize.css"
-import layoutStyles from "../styles/components/layout.module.scss"
+import "bootstrap/dist/css/bootstrap.min.css"
 
 const Layout = props => (
   <div>
     <Header />
-    <div className={layoutStyles.container}>
-      <div className={layoutStyles.content}>{props.children}</div>
+    <div>
+      <div>{props.children}</div>
     </div>
     <Footer />
   </div>

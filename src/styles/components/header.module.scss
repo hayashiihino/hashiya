@@ -1,28 +1,4 @@
-* {
-  margin: 0;
-}
-
-.header {
-  align-items: center;
-  background: black;
+.bland {
+  text-decoration: none !important;
   color: white;
-  display: flex;
-  height: 10vh;
-  margin: 0;
-  margin-bottom: 3rem;
-  a {
-    color: white;
-    display: inline-block;
-    height: 100%;
-    margin-right: 1.3rem;
-    width: 10vw;
-    &:hover {
-      color: black;
-      background: white;
-    }
-  }
-  .active-nav-item {
-    color: black;
-    background: white;
-  }
 }
