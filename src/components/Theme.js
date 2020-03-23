@@ -1,7 +1,7 @@
 import { createMuiTheme } from "@material-ui/core/styles"
 
 let black = "#231F22"
-// let arcOrange = "#FFBA60";
+let white = "#FFFFFF"
 
 export default createMuiTheme({
   palette: {
@@ -12,8 +12,8 @@ export default createMuiTheme({
     primary: {
       main: black,
     },
-    // secondary: {
-    //   main: arcOrange
-    // }
+    secondary: {
+      main: white,
+    },
   },
 })
