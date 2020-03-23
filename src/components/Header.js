@@ -1,25 +1,30 @@
 import React from "react"
-import { Link } from "gatsby"
-import { Navbar, Nav } from "react-bootstrap"
-// import headerStyles from "../styles/components/header.module.scss"
+// import { Link } from "gatsby"
+import AppBar from "@material-ui/core/AppBar"
+import ToolBar from "@material-ui/core/Toolbar"
+import Typography from "@material-ui/core/Typography"
+import Tabs from "@material-ui/core/Tabs"
+import Tab from "@material-ui/core/Tab"
+import { makeStyles } from "@material-ui/styles"
 
-const Header = () => (
-  <Navbar bg="dark" variant="dark">
-    <Link to="/">
-      <Navbar.Brand>ホーム</Navbar.Brand>
-    </Link>
-    <Navbar.Toggle aria-controls="navbarResponsive" />
-    <Navbar.Collapse id="navbarResponsive" variant="light">
-      <Nav as="ul" className="ml-auto">
-        <Link to="/blog" className="nav-link" activeClassName="active">
-          <Nav.Item>ブログ</Nav.Item>
-        </Link>
-        <Link to="/contact" activeClassName="active" className="nav-link">
-          <Nav.Item>お問い合わせ</Nav.Item>
-        </Link>
-      </Nav>
-    </Navbar.Collapse>
-  </Navbar>
-)
+const useStyles = makeStyles(theme => ({
+  tabContainer: {
+    marginLeft: "auto",
+  },
+}))
 
-export default Header
+export default function Header() {
+  const classes = useStyles()
+
+  return (
+    <AppBar position="fixed">
+      <ToolBar>
+        <Typography>HOME</Typography>
+        <Tabs className={classes.tabContainer}>
+          <Tab label="ブログ" />
+          <Tab label="お問い合わせ" />
+        </Tabs>
+      </ToolBar>
+    </AppBar>
+  )
+}
