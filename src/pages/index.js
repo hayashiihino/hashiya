@@ -10,13 +10,15 @@ import Img from "gatsby-image";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import TwitterTimeline from "../components/TwitterTimeline";
+import Profile from "../components/Profile";
+import Quote from "../components/Quote";
 
 const indexPage = props => (
   <Layout>
     <Head title="Home" />
     <Row>
       <Col md={8} className={indexStyles.index}>
-        <Carousel interval={4000}>
+        <Carousel interval={4000} className="mb-5">
           <Carousel.Item>
             <Img
               fluid={props.data.main0.childImageSharp.fluid}
@@ -30,6 +32,8 @@ const indexPage = props => (
             />
           </Carousel.Item>
         </Carousel>
+        <Profile />
+        <Quote />
       </Col>
       <Col md={4}>
         <TwitterTimeline />
