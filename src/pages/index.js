@@ -46,14 +46,14 @@ export default indexPage;
 
 export const query = graphql`
   query {
-    main0: file(relativePath: { eq: "images/main0.jpg" }) {
+    main0: file(relativePath: { eq: "main0.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 750) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    main1: file(relativePath: { eq: "images/main1.jpg" }) {
+    main1: file(relativePath: { eq: "main1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 750) {
           ...GatsbyImageSharpFluid

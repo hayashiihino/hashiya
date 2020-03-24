@@ -13,6 +13,15 @@ module.exports = {
     },
     "gatsby-plugin-react-helmet-async",
     "gatsby-plugin-sass",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: "images",
+        path: `${__dirname}/src/images`,
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -20,14 +29,13 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-sharp",
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/images`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: "quote",
+    //     path: `${__dirname}/src/images/quote`,
+    //   },
+    // },
     {
       resolve: "gatsby-transformer-remark",
       options: {

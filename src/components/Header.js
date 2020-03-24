@@ -17,7 +17,7 @@ export default function Header() {
           <Nav className="ml-auto">
             <Nav.Item>
               <Link to="/blog" className="nav-link" activeClassName="active">
-                Blog
+                ブログ
               </Link>
             </Nav.Item>
             <Nav.Item>
