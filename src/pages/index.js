@@ -7,14 +7,13 @@ import MainCarousel from "../components/MainCarousel";
 import Profile from "../components/Profile";
 import Quote from "../components/Quote";
 import TwitterTimeline from "../components/TwitterTimeline";
-import indexStyles from "../styles/components/index.module.scss";
 
 const indexPage = () => (
   <Layout>
     <Head title="Home" />
+    <MainCarousel />
     <Row>
-      <Col md={8} className={indexStyles.index}>
-        <MainCarousel />
+      <Col md={8}>
         <Profile />
         <Quote />
       </Col>

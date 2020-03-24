@@ -10,7 +10,7 @@ const MainCarousel = () => {
         nodes {
           id
           childImageSharp {
-            fluid(maxWidth: 750) {
+            fluid {
               ...GatsbyImageSharpFluid
             }
           }
@@ -21,12 +21,8 @@ const MainCarousel = () => {
   return (
     <Carousel interval={4000} className="mb-5">
       {data.images.nodes.map(image => (
-        <Carousel.Item>
-          <Img
-            fluid={image.childImageSharp.fluid}
-            alt="slide image"
-            key={image.id}
-          />
+        <Carousel.Item key={image.id}>
+          <Img fluid={image.childImageSharp.fluid} alt="slide image" />
         </Carousel.Item>
       ))}
     </Carousel>
