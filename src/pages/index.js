@@ -9,6 +9,7 @@ import { graphql } from "gatsby";
 import Img from "gatsby-image";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import TwitterTimeline from "../components/TwitterTimeline";
 
 const indexPage = props => (
   <Layout>
@@ -30,7 +31,9 @@ const indexPage = props => (
           </Carousel.Item>
         </Carousel>
       </Col>
-      <Col md={4}>twitter will be here</Col>
+      <Col md={4}>
+        <TwitterTimeline />
+      </Col>
     </Row>
   </Layout>
 );
