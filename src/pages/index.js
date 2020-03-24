@@ -12,16 +12,14 @@ const indexPage = props => (
   <div className={indexStyles.index}>
     <Layout>
       <Head title="Home" />
-      <Carousel>
+      <Carousel interval={4000}>
         <Carousel.Item>
           <Img
             fluid={props.data.main0.childImageSharp.fluid}
             alt="slide image"
           />
-          {/* <img src={main0} alt="slide image" /> */}
         </Carousel.Item>
         <Carousel.Item>
-          {/* <img src={main1} alt="slide image" /> */}
           <Img
             fluid={props.data.main1.childImageSharp.fluid}
             alt="slide image"
