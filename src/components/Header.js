@@ -23,16 +23,28 @@ const useStyles = makeStyles(theme => ({
 export default function Header() {
   const classes = useStyles();
   const [value, setValue] = useState(0);
+  const routes = ["/blog", "/contact"];
   const handleChange = (e, value) => {
     console.log(e.target);
     setValue(value);
   };
+  useEffect(() => {
+    const indexRoute =
+      routes.includes(window.location.pathname) &&
+      routes.indexOf(window.location.pathname);
+    setValue(indexRoute);
+  }, [routes, value]);
 
   return (
     <React.Fragment>
       <AppBar position="fixed">
         <ToolBar>
-          <Typography component={Link} to="/" className={classes.title}>
+          <Typography
+            component={Link}
+            to="/"
+            className={classes.title}
+            onClick={() => setValue(undefined)}
+          >
             HOME
           </Typography>
           <Tabs
