@@ -1,19 +1,16 @@
-import React from "react"
-import Header from "./Header"
-import Footer from "./Footer"
-import theme from "./Theme"
-import { ThemeProvider } from "@material-ui/core/styles"
+import React from "react";
+import Header from "./Header";
+import Footer from "./Footer";
+import Container from "react-bootstrap/Container";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../styles/base/theme.scss";
 
 const Layout = props => (
   <React.Fragment>
-    <ThemeProvider theme={theme}>
-      <Header />
-      <div>
-        <div>{props.children}</div>
-      </div>
-      <Footer />
-    </ThemeProvider>
+    <Header />
+    <Container className="my-5">{props.children}</Container>
+    <Footer />
   </React.Fragment>
-)
+);
 
-export default Layout
+export default Layout;

@@ -1,10 +1,11 @@
-import React from "react"
-import FooterStyle from "../styles/components/footer.module.scss"
+import React from "react";
+import FooterStyle from "../styles/components/footer.module.scss";
+import Container from "react-bootstrap/Container";
 
 const Footer = () => (
-  <div className={FooterStyle.footer}>
+  <Container className={FooterStyle.footer}>
     <p>©2020 林　翔太</p>
-  </div>
-)
+  </Container>
+);
 
-export default Footer
+export default Footer;
