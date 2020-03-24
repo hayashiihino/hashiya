@@ -7,27 +7,32 @@ import Carousel from "react-bootstrap/Carousel";
 import indexStyles from "../styles/components/index.module.scss";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 const indexPage = props => (
-  <div className={indexStyles.index}>
-    <Layout>
-      <Head title="Home" />
-      <Carousel interval={4000}>
-        <Carousel.Item>
-          <Img
-            fluid={props.data.main0.childImageSharp.fluid}
-            alt="slide image"
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <Img
-            fluid={props.data.main1.childImageSharp.fluid}
-            alt="slide image"
-          />
-        </Carousel.Item>
-      </Carousel>
-    </Layout>
-  </div>
+  <Layout>
+    <Head title="Home" />
+    <Row>
+      <Col md={8} className={indexStyles.index}>
+        <Carousel interval={4000}>
+          <Carousel.Item>
+            <Img
+              fluid={props.data.main0.childImageSharp.fluid}
+              alt="slide image"
+            />
+          </Carousel.Item>
+          <Carousel.Item>
+            <Img
+              fluid={props.data.main1.childImageSharp.fluid}
+              alt="slide image"
+            />
+          </Carousel.Item>
+        </Carousel>
+      </Col>
+      <Col md={4}>twitter will be here</Col>
+    </Row>
+  </Layout>
 );
 
 export default indexPage;
