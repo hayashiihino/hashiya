@@ -2,6 +2,7 @@ import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
+import classes from "../styles/components/main-carousel.module.scss";
 
 const MainCarousel = () => {
   const data = useStaticQuery(graphql`
@@ -19,13 +20,20 @@ const MainCarousel = () => {
     }
   `);
   return (
-    <Carousel interval={4000} className="mb-5">
-      {data.images.nodes.map(image => (
-        <Carousel.Item key={image.id}>
-          <Img fluid={image.childImageSharp.fluid} alt="slide image" />
-        </Carousel.Item>
-      ))}
-    </Carousel>
+    <div>
+      <Carousel interval={4000}>
+        {data.images.nodes.map(image => (
+          <Carousel.Item key={image.id} className={classes.carousel}>
+            <Img fluid={image.childImageSharp.fluid} alt="slide image" />
+            <Carousel.Caption className={classes.title}>
+              <h4>漫画、描きます</h4>
+              <h4>絵、書きます</h4>
+              <h4>似顔絵も書きます</h4>
+            </Carousel.Caption>
+          </Carousel.Item>
+        ))}
+      </Carousel>
+    </div>
   );
 };
 
