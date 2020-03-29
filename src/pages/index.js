@@ -18,7 +18,9 @@ const indexPage = () => (
         <div className={`mb-5 ${classes.content}`}>
           <Profile />
         </div>
-        <Quote />
+        <div className={`mb-5 ${classes.content}`}>
+          <Quote />
+        </div>
       </Col>
       <Col md={4}>
         <TwitterTimeline />

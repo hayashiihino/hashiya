@@ -1,6 +1,18 @@
 .content {
   h3 {
-    background: black;
+    font-size: 1.2rem;
+    background: linear-gradient(
+      60deg,
+      #000001,
+      #000001 70%,
+      #f2f6e9 70%,
+      #f2f6e9 80%,
+      #000001 80%,
+      #000001 90%,
+      #f2f6e9 90%
+    );
     color: white;
+    display: inline-block;
+    padding: 0.5rem 6rem 0.5rem 2rem;
   }
 }

@@ -28,10 +28,10 @@ const Quote = () => {
   console.log(randomImage());
 
   return (
-    <div>
+    <React.Fragment>
       <h3>今日の名言</h3>
       {randomImage()}
-    </div>
+    </React.Fragment>
   );
 };
 
