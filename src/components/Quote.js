@@ -25,8 +25,6 @@ const Quote = () => {
     return <Img key={image.id} fluid={image} />;
   };
 
-  console.log(randomImage());
-
   return (
     <React.Fragment>
       <h3>今日の名言</h3>
