@@ -21,6 +21,15 @@ export default function Header() {
               </Link>
             </Nav.Item>
             <Nav.Item>
+              <Link
+                to="/illustration"
+                className="nav-link"
+                activeClassName="active"
+              >
+                イラスト
+              </Link>
+            </Nav.Item>
+            <Nav.Item>
               <Link to="/contact" className="nav-link" activeClassName="active">
                 お問い合わせ
               </Link>

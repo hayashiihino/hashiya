@@ -6,7 +6,7 @@ export default function TwitterTimeline() {
     <TwitterTimelineEmbed
       sourceType="profile"
       screenName="hashiya18"
-      options={{ height: "80vh" }}
+      options={{ height: "120vh" }}
     />
   );
 }
